@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#71BCFA"
+        android:padding="6dip">
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="0.12"
+            android:text="@string/add_item"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/textNewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/adddescription_textbox_hint">
+            <requestFocus />
+        </EditText>
+        <EditText
+            android:id="@+id/textNewSKU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/addsku_textbox_hint" />
+        <EditText
+            android:id="@+id/textNewCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/addcost_textbox_hint" />
+        <EditText
+            android:id="@+id/textNewLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/addlocation_textbox_hint" />
+        <Button
+            android:id="@+id/buttonAddNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="AddItem"
+            android:text="@string/add_button_text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#71BCFA"
+        android:padding="6dip">
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="0.12"
+            android:text="@string/search_item"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/textSearchDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/searchdescription_textbox_hint" />
+        <Button
+            android:id="@+id/buttonSearchNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="SearchItem"
+            android:text="@string/search_button_text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#71BCFA"
+        android:padding="6dip">
+        <TextView
+            android:id="@+id/textViewSubTitle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="0.12"
+            android:text="@string/registered_items"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listViewNick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/row_list_nick"
+        android:padding="6dip" />
+</LinearLayout>
